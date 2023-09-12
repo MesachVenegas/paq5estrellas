@@ -19,7 +19,7 @@ nav {
     cursor: pointer;
     overflow: hidden;
 
-    & img {
+    > img {
         width: 100%;
         object-fit: contain;
     }
@@ -36,7 +36,7 @@ nav {
     cursor: pointer;
     overflow: hidden;
 
-    & span {
+    > span {
         background-color: var(--blue);
         border-radius: 1em;
         width: 100%;
@@ -47,7 +47,7 @@ nav {
     &.open {
         > :nth-child(1) {
             position: relative;
-            transform: rotate(45deg) translateY(150%) translateX(20%);
+            transform: rotate(45deg) translate(20%, 150%);
         }
 
         > :nth-child(2) {
@@ -77,13 +77,13 @@ nav {
     padding: 2em 0;
     transition: all 0.3s ease;
 
-    & li {
+    > li {
         position: relative;
         display: inline-block;
         list-style: none;
         font-weight: bold;
 
-        & a {
+        > a {
             color: var(--text);
             text-decoration: none;
 
