@@ -67,11 +67,12 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: var(--white);
     gap: 1em;
     top: 70px;
     right: 0;
     width: 0;
-    height: 0;
+    height: 90vh;
     display: flex;
     overflow: hidden;
     padding: 2em 0;
@@ -99,7 +100,6 @@ nav {
 
     &.open{
         width: 70%;
-        height: 90vh;
     }
 }
 
