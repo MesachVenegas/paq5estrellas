@@ -1,10 +1,10 @@
 import SocialBar from "./SocialBar/SocialBar";
-import Slider from "./slider/Slider";
+import Carousel from "./carousel/Carousel";
 import Navbar from "./navbar/Navbar";
 
 
 export {
     SocialBar,
     Navbar,
-    Slider
+    Carousel
 }
