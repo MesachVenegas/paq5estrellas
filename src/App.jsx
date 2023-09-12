@@ -1,4 +1,4 @@
-import { SocialBar, Navbar, Slider } from './components/Index'
+import { SocialBar, Navbar, Carousel } from './components/Index'
 import './App.css'
 
 function App() {
@@ -7,7 +7,9 @@ function App() {
     <>
       <SocialBar />
       <Navbar />
-      <Slider />
+      <main>
+        <Carousel />
+      </main>
     </>
   )
 }
