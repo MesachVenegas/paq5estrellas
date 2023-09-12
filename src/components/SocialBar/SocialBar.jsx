@@ -3,7 +3,7 @@ import { social } from './../../utils/constants';
 
 const SocialBar = () => {
     return (
-        <div className="info_bar">
+        <header className="info_bar">
             <div className="social_container">
                 <a href={social.facebook} target="_blank" rel="noreferrer" >
                     <i className="fa-brands fa-facebook-f"></i>
@@ -24,7 +24,7 @@ const SocialBar = () => {
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
-        </div>
+        </header>
     );
 };
 
