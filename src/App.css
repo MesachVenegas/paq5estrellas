@@ -3,3 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --blue: #05326B;
+    --yellow: #FDB103;
+    --white: #FFFFFF;
+    --trans_blue: #05326B;
+    --title: #000;
+    --text: #707070;
+}
