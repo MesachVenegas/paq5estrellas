@@ -1,0 +1,123 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0 1em;
+    box-shadow: 0 1px 5px #000;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.brand {
+    display: grid;
+    place-content: center;
+    width: 150px;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.menu_btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    overflow: hidden;
+
+    & span {
+        background-color: var(--blue);
+        border-radius: 1em;
+        width: 100%;
+        height: 6px;
+        transition: all 0.3s;
+    }
+
+    &.open {
+        > :nth-child(1) {
+            position: relative;
+            transform: rotate(45deg) translateY(150%) translateX(20%);
+        }
+
+        > :nth-child(2) {
+            transform: translateX(50px);
+        }
+
+        > :nth-child(3) {
+            position: relative;
+            top: -40%;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.menu {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    top: 70px;
+    right: 0;
+    width: 0;
+    height: 0;
+    display: flex;
+    overflow: hidden;
+    padding: 2em 0;
+    transition: all 0.3s ease;
+
+    & li {
+        position: relative;
+        display: inline-block;
+        list-style: none;
+        font-weight: bold;
+
+        & a {
+            color: var(--text);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--blue);
+            }
+        }
+
+        &:hover {
+            animation: glitch 1s ;
+        }
+    }
+
+    &.open{
+        width: 70%;
+        height: 90vh;
+    }
+}
+
+
+@keyframes glitch {
+    0%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translate(-5px, 5px);
+    }
+    50%{
+        transform: translate(5px, -5px);
+    }
+    75%{
+        transform: translate(-5px, 5px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
