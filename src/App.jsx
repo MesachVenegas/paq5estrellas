@@ -1,18 +1,20 @@
-import { SocialBar, Navbar, Carousel } from './components/Index';
-import { slider1, slider3, slider4, slider5 } from './assets';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { SocialBar, Navbar} from './components/Index';
+import Home from './pages/Home';
 import './App.css'
 
 function App() {
-  const imgs = [slider1, slider3, slider4, slider5];
 
   return (
-    <>
+    <BrowserRouter>
       <SocialBar />
       <Navbar />
       <main>
-        <Carousel images={imgs} />
+        <Routes>
+            <Route path='/' element={<Home />}/>
+        </Routes>
       </main>
-    </>
+    </BrowserRouter>
   )
 }
 

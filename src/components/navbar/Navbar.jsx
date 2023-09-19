@@ -1,4 +1,5 @@
 import { Logo_svg } from '../../assets'
+import { Link } from 'react-router-dom';
 import './style.css'
 
 const Navbar = () => {
@@ -12,13 +13,13 @@ const Navbar = () => {
 
     return (
         <nav>
-            <a href='#' className="brand">
+            <Link to="/" className="brand">
                 <img src={Logo_svg} alt="brand_logo" />
-            </a>
+            </Link>
             <ul className="menu">
-                <li><a href="#">Conocenos</a></li>
-                <li><a href="#">Atencion al Cliente</a></li>
-                <li><a href="#">Contactanos</a></li>
+                <li><Link to="/About">Conocenos</Link></li>
+                <li><Link to="/Clients">Atencion al Cliente</Link></li>
+                <li><Link to="/Contact">Contactanos</Link></li>
             </ul>
             <div className="menu_btn" onClick={handleMenu}>
                 <span></span>
