@@ -1,0 +1,119 @@
+.utils {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    width: 100%;
+
+    > h1 {
+        color: var(--blue);
+    }
+
+    > h2 {
+        color: var(--blue);
+        font-size: 1.2em;
+    }
+}
+
+.actions_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    width: 100%;
+    min-height: 300px;
+    list-style: none;
+
+    > li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 70px;
+        border-radius: 10px;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: all 0.2s;
+        background: linear-gradient(to bottom,
+        rgba(5, 50, 107, 1) 40%,
+        rgba(0,0,0, 1) 100%
+        );
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
+        }
+
+        >a {
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--white);
+        }
+    }
+}
+
+.action_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+.findUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    width: 100%;
+    height: 560px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+@media screen and (min-width: 589px) {
+    .map {
+        width: 90%;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .actions_container{
+
+        > li {
+            width: 300px;
+            font-size: 1.2em;
+        }
+    }
+
+    .map {
+        width: 80%;
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .map {
+        width: 70%;
+        height: 550px;
+    }
+}
