@@ -55,3 +55,12 @@
         cursor: pointer;
     }
 }
+
+
+@media screen and (min-width: 489px) {
+    .search_container {
+        > input {
+            width: 200px
+        };
+    }
+}
