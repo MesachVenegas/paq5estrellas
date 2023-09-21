@@ -1,4 +1,4 @@
-import { logo__foot } from '../../assets'
+import logo__foot  from '../../assets/logo_foot.png'
 import { social } from '../../utils/constants';
 import './footer.css';
 

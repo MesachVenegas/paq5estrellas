@@ -1,6 +1,9 @@
 import { Carousel } from '../../components/Index';
 import { Link } from 'react-router-dom';
-import { slider1, slider3, slider4, slider5 } from '../../assets/';
+import slider1 from '../../assets/paqueteria_layer.jpg';
+import slider3  from '../../assets/slider3.jpg';
+import slider4  from '../../assets/slider4.jpg';
+import slider5  from '../../assets/slider5.jpg';
 import './home.css'
 
 const Home = () => {

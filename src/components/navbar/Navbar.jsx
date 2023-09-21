@@ -1,4 +1,4 @@
-import { Logo_svg } from '../../assets'
+import Logo_svg  from '../../assets/Logo.svg';
 import { Link } from 'react-router-dom';
 import './style.css'
 
