@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SocialBar, Navbar, Footer} from './components/Index';
-import { Home, Zips } from './pages/'
+import Zips from './pages/Zips/Zips';
+import Home from './pages/Home/Home';
 import './App.css'
 
 function App() {
