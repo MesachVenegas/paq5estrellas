@@ -44,7 +44,7 @@ const Home = () => {
                     <div className='map'>
                         <iframe
                             loading="lazy"
-                            allowfullscreen
+                            // allowfullscreen
                             style={{
                                 width: '100%',
                                 height: '100%',
