@@ -15,3 +15,8 @@
     --text: #707070;
     font-family: 'Poppins', sans-serif;
 }
+
+.container {
+    max-width: 1366px;
+    margin: auto;
+}

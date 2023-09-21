@@ -7,7 +7,7 @@ const Home = () => {
     const imgs = [slider1, slider3, slider4, slider5];
 
     return (
-        <>
+        <div className='container'>
             <Carousel images={imgs} />
             <section className='utils'>
                 <div className="titles">
@@ -52,7 +52,7 @@ const Home = () => {
                         </iframe>
                     </div>
             </section>
-        </>
+        </div>
     );
 };
 

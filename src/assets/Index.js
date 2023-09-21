@@ -5,6 +5,7 @@ import facebook from './facebook-f.svg';
 import check from './check-solid.svg';
 import Logo_svg from './Logo.svg';
 import logo_png from './logo_no_bg.png'
+import logo__foot from './logo_foot.png';
 import instagram from './instagram.svg';
 import search from './magnifying-glass-solid.svg';
 import location from './map-location-dot-solid.svg';
@@ -26,6 +27,7 @@ export {
     check,
     Logo_svg,
     logo_png,
+    logo__foot,
     instagram,
     search,
     location,

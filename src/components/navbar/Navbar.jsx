@@ -13,18 +13,20 @@ const Navbar = () => {
 
     return (
         <nav>
-            <Link to="/" className="brand">
-                <img src={Logo_svg} alt="brand_logo" />
-            </Link>
-            <ul className="menu">
-                <li><Link to="/About">Conocenos</Link></li>
-                <li><Link to="/Clients">Atencion al Cliente</Link></li>
-                <li><Link to="/Contact">Contactanos</Link></li>
-            </ul>
-            <div className="menu_btn" onClick={handleMenu}>
-                <span></span>
-                <span></span>
-                <span></span>
+            <div className="nav_container">
+                <Link to="/" className="brand">
+                    <img src={Logo_svg} alt="brand_logo" />
+                </Link>
+                <ul className="menu">
+                    <li><Link to="/About">Conocenos</Link></li>
+                    <li><Link to="/Clients">Atencion al Cliente</Link></li>
+                    <li><Link to="/Contact">Contactanos</Link></li>
+                </ul>
+                <div className="menu_btn" onClick={handleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
     );
