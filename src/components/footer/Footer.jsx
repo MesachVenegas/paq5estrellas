@@ -22,7 +22,8 @@ const Footer = () => {
                     </div>
                     <ul className='foot_links'>
                         <li>
-                            <a href="tel:663 221 9250"><i className="fa-solid fa-phone"></i>663 221 9250</a>
+                            <a href="tel:663 221 9250"><i className="fa-solid fa-phone"></i>663 221 9250 </a>
+                            <a href="tel:664 130 3694">o 664 130 3694</a>
                         </li>
                         <li>
                             <a href={social.whatsapp}><i className="fa-brands fa-whatsapp"></i>Envíanos un mensaje</a>
