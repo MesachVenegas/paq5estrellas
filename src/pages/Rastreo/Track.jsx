@@ -1,10 +1,9 @@
-import './track.css';
 
 const Track = () => {
     return (
         <section className="container">
             <div>
-                <div className="track_head">
+                <div className="section_head">
                     <h2>Rastreo de Envíos</h2>
                     <p>Elige una de las opciones de rastro disponibles a continuacion para realizar el seguimiento de tu envió</p>
                 </div>
