@@ -13,10 +13,30 @@
     --trans_blue: #f0f4f8;
     --title: #000;
     --text: #494848;
+    --hover: #0759c5;
     font-family: 'Poppins', sans-serif;
 }
 
 .container {
     max-width: 1366px;
     margin: auto;
+}
+
+.section_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    padding: 1em;
+
+    >h2 {
+        color: var(--blue);
+    }
+
+    >p,> ol{
+        font-size: .9em;
+        color: var(--text);
+    }
 }
