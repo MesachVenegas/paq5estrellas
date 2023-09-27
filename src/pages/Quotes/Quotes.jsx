@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './quotes.css';
 
 const Quotes = () => {
+    const [upon, setUpon] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = handleSubmit(data => {
@@ -57,35 +59,39 @@ const Quotes = () => {
                 <div className="radio_container">
                     <p>Tipo:</p>
                     <div className="radio_group">
-                        <input type="radio" id='upon' value='upon' />
+                        <input type="radio" name='type' id='upon' value='upon' onChange={() => setUpon(false)} />
                         <label htmlFor="upon">Sobre</label>
-                        <input type="radio" id='package' value='package' />
+                        <input type="radio" name='type' id='package' value='package' onChange={() => setUpon(true)} />
                         <label htmlFor="package">Paquete</label>
                     </div>
                 </div>
-                <div className='package_details'>
-                    <div className="form_group-head">
-                        <h4>Proporcione los datos del paquete.</h4>
-                    </div>
-                    <div className="form_group-package">
-                        <div className="form_group-package-item">
-                            <label htmlFor="weight">Peso en Kg:</label>
-                            <input type="text" id='weight' {...register("weight")} />
+                {
+                    upon && (
+                        <div className='package_details'>
+                            <div className="form_group-head">
+                                <h4>Proporcione los datos del paquete.</h4>
+                            </div>
+                            <div className="form_group-package">
+                                <div className="form_group-package-item">
+                                    <label htmlFor="weight">Peso en Kg:</label>
+                                    <input type="text" id='weight' {...register("weight")} />
+                                </div>
+                                <div className="form_group-package-item">
+                                    <label htmlFor="high">Alto en cms:</label>
+                                    <input type="text" id='high'  {...register("high")} />
+                                </div>
+                                <div className="form_group-package-item">
+                                    <label htmlFor="width">Ancho en cms:</label>
+                                    <input type="text" id='width' {...register("width")} />
+                                </div>
+                                <div className="form_group-package-item">
+                                    <label htmlFor="long">Largo en cms:</label>
+                                    <input type="text" id='long'  {...register("long")} />
+                                </div>
+                            </div>
                         </div>
-                        <div className="form_group-package-item">
-                            <label htmlFor="high">Alto en cms:</label>
-                            <input type="text" id='high'  {...register("high")} />
-                        </div>
-                        <div className="form_group-package-item">
-                            <label htmlFor="width">Ancho en cms:</label>
-                            <input type="text" id='width' {...register("width")} />
-                        </div>
-                        <div className="form_group-package-item">
-                            <label htmlFor="long">Largo en cms:</label>
-                            <input type="text" id='long'  {...register("long")} />
-                        </div>
-                    </div>
-                </div>
+                    )
+                }
 
                 <div className="form_actions">
                     <button>Calcular <i className="fa-solid fa-calculator"></i></button>
