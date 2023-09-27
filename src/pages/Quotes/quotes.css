@@ -19,16 +19,11 @@
     gap: 1.5em;
     width: 100%;
     color: var(--text);
-
-    > input[type="text"]{
-        width: 200px;
-        height: 30px;
-        border-radius: 5px;
-    }
 }
 
 .radio_group {
     display: flex;
+    position: relative;
     gap: .5em;
 }
 
@@ -107,5 +102,29 @@
         &:hover{
             color: var(--hover);
         }
+    }
+}
+
+.input_box{
+    display: flex;
+    flex-direction: column;
+
+    >input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+        }
+}
+
+.error_msg {
+    color: red;
+}
+
+
+@media screen and (min-width: 992px) {
+    .package_details {
+        gap: 2em;
+        justify-content: space-between;
+        width: 90%;
     }
 }
