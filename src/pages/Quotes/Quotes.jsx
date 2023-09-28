@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import './quotes.css';
 
 const Quotes = () => {
-    const [upon, setUpon] = useState(false);
+    const [packageRadio, setPackageRadio] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = handleSubmit(data => {
@@ -29,15 +29,18 @@ const Quotes = () => {
                             type="text"
                             id='origin'
                             {...register("origin", {
-                                required: true,
-                                pattern: /^[0-9]{5}$/
+                                required: {
+                                    value: true,
+                                    message: "Ingrese un codigo postal primero"
+                                },
+                                pattern: {
+                                    value: /^[0-9]{5}$/,
+                                    message: "Ingrese un codigo postal valido"
+                                }
                             })}
                         />
                         {
-                            errors.origin?.type === "required" && <small className='error_msg'>Ingrese un codigo postal primero</small>
-                        }
-                        {
-                            errors.origin?.type === "pattern" && <small className='error_msg'>Ingrese un codigo postal valido</small>
+                            errors.origin?.type === "required" && <small className='error_msg'>{errors.origin.message}</small>
                         }
                     </div>
                 </div>
@@ -45,28 +48,31 @@ const Quotes = () => {
                     <label htmlFor="destiny">Codigo postal destino:</label>
                     <div className="input_box">
                         <input type="text" id='destiny' {...register("destiny", {
-                            required: true,
-                            pattern: /^[0-9]{5}$/
+                            required: {
+                                value: true,
+                                message: "Ingrese un codigo destino primero",
+                            },
+                            pattern: {
+                                value: /^[0-9]{5}$/,
+                                message: "Ingrese un codigo postal valido"
+                            }
                         })} />
                         {
-                            errors.destiny?.type === "required" && <small className='error_msg'>Ingrese un codigo postal primero</small>
-                        }
-                        {
-                            errors.destiny?.type === "pattern" && <small className='error_msg'>Ingrese un codigo postal valido</small>
+                            errors.destiny && <small className='error_msg'>{errors.destiny.message}</small>
                         }
                     </div>
                 </div>
                 <div className="radio_container">
                     <p>Tipo:</p>
                     <div className="radio_group">
-                        <input type="radio" name='type' id='upon' value='upon' onChange={() => setUpon(false)} />
+                        <input type="radio" name='type' id='upon' value='upon' onChange={() => setPackageRadio(false)} defaultChecked />
                         <label htmlFor="upon">Sobre</label>
-                        <input type="radio" name='type' id='package' value='package' onChange={() => setUpon(true)} />
+                        <input type="radio" name='type' id='package' value='package' onChange={() => setPackageRadio(true)} />
                         <label htmlFor="package">Paquete</label>
                     </div>
                 </div>
                 {
-                    upon && (
+                    packageRadio && (
                         <div className='package_details'>
                             <div className="form_group-head">
                                 <h4>Proporcione los datos del paquete.</h4>
@@ -74,19 +80,87 @@ const Quotes = () => {
                             <div className="form_group-package">
                                 <div className="form_group-package-item">
                                     <label htmlFor="weight">Peso en Kg:</label>
-                                    <input type="text" id='weight' {...register("weight")} />
+                                    <div className="input_box">
+                                        <input
+                                            type="text"
+                                            id='weight'
+                                            {...register("weight", {
+                                                validate: (value) => {
+                                                    if (packageRadio) {
+                                                        if (!value || value.trim() === '') {
+                                                            return "Este campo es requerido"
+                                                        }
+                                                    }
+                                                }
+                                            })}
+                                        />
+                                        {
+                                            errors.weight && <small className='error_msg'>{errors.weight.message}</small>
+                                        }
+                                    </div>
                                 </div>
                                 <div className="form_group-package-item">
                                     <label htmlFor="high">Alto en cms:</label>
-                                    <input type="text" id='high'  {...register("high")} />
+                                    <div className="input_box">
+                                        <input
+                                            type="text"
+                                            id='high'
+                                            {...register("high", {
+                                                validate: (value) => {
+                                                    if (packageRadio) {
+                                                        if (!value || value.trim() === '') {
+                                                            return "Este campo es requerido"
+                                                        }
+                                                    }
+                                                }
+                                            })}
+                                        />
+                                        {
+                                            errors.high && <small className='error_msg'>{errors.high.message}</small>
+                                        }
+                                    </div>
                                 </div>
                                 <div className="form_group-package-item">
                                     <label htmlFor="width">Ancho en cms:</label>
-                                    <input type="text" id='width' {...register("width")} />
+                                    <div className="input_box">
+                                        <input
+                                            type="text"
+                                            id='width'
+                                            {...register("width", {
+                                                validate: (value) => {
+                                                    if (packageRadio) {
+                                                        if (!value || value.trim() === '') {
+                                                            return "Este campo es requerido"
+                                                        }
+                                                    }
+                                                }
+                                            })}
+                                        />
+                                        {
+                                            errors.width && <small className='error_msg'>{errors.width.message}</small>
+                                        }
+                                    </div>
                                 </div>
                                 <div className="form_group-package-item">
                                     <label htmlFor="long">Largo en cms:</label>
-                                    <input type="text" id='long'  {...register("long")} />
+                                    <div className="input_box">
+                                        <input
+                                            type="text"
+                                            id='long'
+                                            {...register("long", {
+                                                validate: (value) => {
+                                                    if (packageRadio) {
+                                                        if (!value || value.trim() === '') {
+                                                            return "Este campo es requerido"
+                                                        }
+                                                    }
+                                                }
+                                            })}
+                                        />
+                                        {
+                                            errors.long && <small className='error_msg'>{errors.long.message}</small>
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         </div>
