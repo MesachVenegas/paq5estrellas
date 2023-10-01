@@ -1,13 +1,19 @@
-import { useState } from 'react';
+import Table from '../../components/quoteTable/Table';
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 import './quotes.css';
 
 const Quotes = () => {
     const [packageRadio, setPackageRadio] = useState(false);
+    const [displayQuote, setDisplayQuote] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = handleSubmit(data => {
-        console.log(data);
+        const { destiny, high, long, origin, weight, width } = data;
+
+        const preCalculated = long * width * high / 5000;
+        setDisplayQuote(true);
+        console.log(preCalculated);
     })
 
     return (
@@ -172,6 +178,11 @@ const Quotes = () => {
                     <small>Limpiar Formulario</small>
                 </div>
             </form>
+            <div className="table_box">
+                {
+                    displayQuote && <Table />
+                }
+            </div>
         </section>
     );
 };
