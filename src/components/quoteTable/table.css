@@ -1,0 +1,25 @@
+table {
+    width: 90%;
+    margin: auto;
+}
+
+th{
+    height: 40px;
+    background-color: var(--trans_blue);
+}
+
+.concept {
+    width: 60%;
+}
+
+td {
+    height: 30px;
+    text-align: right;
+}
+
+tbody {
+    > tr >:first-child {
+        padding: 0 1em;
+        text-align: left;
+    }
+}
