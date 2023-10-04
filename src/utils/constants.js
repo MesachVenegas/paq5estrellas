@@ -39,3 +39,7 @@ export const states = [
     "Yucatán",
     "Zacatecas"
 ]
+
+export const terrestre = {
+
+}
