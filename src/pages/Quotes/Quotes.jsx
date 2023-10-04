@@ -6,14 +6,23 @@ import './quotes.css';
 const Quotes = () => {
     const [packageRadio, setPackageRadio] = useState(false);
     const [displayQuote, setDisplayQuote] = useState(false);
+    const [weight, setWeight] = useState(0);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = handleSubmit(data => {
         const { destiny, high, long, origin, weight, width } = data;
+        let calc = undefined;
+        if(high && long && width) {
+            const preCalc = Math.ceil(long * width * high / 5000);
 
-        const preCalculated = long * width * high / 5000;
+            if(preCalc > weight) {
+                calc = preCalc;
+            } else {
+                calc = weight;
+            }
+        }
+        setWeight(calc);
         setDisplayQuote(true);
-        console.log(preCalculated);
     })
 
     return (
@@ -180,7 +189,7 @@ const Quotes = () => {
             </form>
             <div className="table_box">
                 {
-                    displayQuote && <Table />
+                    displayQuote && <Table weight={weight}/>
                 }
             </div>
         </section>
