@@ -13,9 +13,9 @@ const SocialBar = () => {
                         <a href={social.whatsapp} target="_blank" rel='noreferrer' >
                             <i className="fa-brands fa-whatsapp"></i>
                         </a>
-                        {/* <a href="#" target="_blank" rel='noreferrer' >
+                        <a href={social.instagram} target="_blank" rel='noreferrer' >
                             <i className="fa-brands fa-instagram"></i>
-                        </a> */}
+                        </a>
                         <a href={social.tiktok} target="_blank" rel="noreferrer">
                             <i className="fa-brands fa-tiktok"></i>
                         </a>
