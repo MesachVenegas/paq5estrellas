@@ -34,7 +34,12 @@ const Footer = () => {
                     <p>Todos los derechos reservados &copy; 2023 Paqueteria 5 Estrellas S.A de C.V, La escondida, 22106 Tijuana, Baja California, Mexico</p>
                 </div>
                 <small className='meshdev'>
-                    Made with <span>❤️</span> by <a href="#">MeshDev</a>
+                    Made with
+                    <span>❤️</span>
+                    by
+                    <a href="https://meshdev.vercel.app/" target='_blank' rel='noreferrer'>
+                        MeshDev
+                    </a>
                 </small>
             </div>
         </footer>

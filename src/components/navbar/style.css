@@ -100,12 +100,8 @@ nav {
             text-decoration: none;
 
             &:hover {
-                color: var(--blue);
+                color: var(--yellow);
             }
-        }
-
-        &:hover {
-            animation: glitch 1s ;
         }
     }
 

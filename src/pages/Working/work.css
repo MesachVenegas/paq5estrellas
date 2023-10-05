@@ -1,0 +1,42 @@
+.process {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80vh;
+
+    > figcaption {
+        width: 100%;
+        padding: 1em;
+        font-size: 1.5em;
+        color: var(--blue);
+        font-weight: bold;
+    }
+
+    > img {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .process {
+        > img{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .process {
+        > figcaption {
+            font-size: 2em;
+            width: 50%;
+        }
+
+        > img{
+            width: 50%;
+        }
+    }
+}

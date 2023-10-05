@@ -18,9 +18,9 @@ const Navbar = () => {
                     <img src={Logo_svg} alt="brand_logo" />
                 </Link>
                 <ul className="menu">
-                    <li><Link to="/About">Conocenos</Link></li>
-                    <li><Link to="/Clients">Atencion al Cliente</Link></li>
-                    <li><Link to="/Contact">Contactanos</Link></li>
+                    <li><Link to="/">Inicio</Link></li>
+                    <li><Link to="/about">Sobre Nosotros</Link></li>
+                    <li><Link to="/contact">Contactanos</Link></li>
                 </ul>
                 <div className="menu_btn" onClick={handleMenu}>
                     <span></span>
