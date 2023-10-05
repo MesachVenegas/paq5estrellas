@@ -1,3 +1,49 @@
+.head_table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5em;
+    width: 100%;
+    margin: auto;
+    font-size: .9em;
+    padding: 1em;
+    background: var(--trans_blue);
+
+    > div {
+        display: flex;
+        gap: 2em;
+        width: 100%;
+
+        > p {
+            width: 150px;
+        }
+    }
+}
+
+.delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    margin: auto;
+    padding: 2em 1em;
+    background: var(--trans_blue);
+
+    >h4{
+        color: var(--blue);
+    }
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3em;
+    width: 90%;
+}
+
 table {
     width: 98%;
     margin: auto;
@@ -36,10 +82,32 @@ tbody {
     background: var(--yellow);
 }
 
+.notes {
+    list-style: none;
+    font-size: .9em;
+    padding: 1em;
+    color: red;
+    width: 95%;
+    margin: auto;
+}
+
 
 @media screen and (min-width: 768px) {
+    .head_table,
+    .delivery{
+        width: 70%;
+    }
+
+    .days {
+        width: 50%;
+    }
+
     table {
         width: 70%;
         font-size: 1em;
+    }
+
+    .notes {
+        width: 70%;
     }
 }

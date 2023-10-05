@@ -1,12 +1,13 @@
 import Table from '../../components/quoteTable/Table';
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './quotes.css';
 
 const Quotes = () => {
     const [packageRadio, setPackageRadio] = useState(false);
     const [displayQuote, setDisplayQuote] = useState(false);
     const [weight, setWeight] = useState(0);
+    const [place, setPlace] = useState(undefined);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = handleSubmit(data => {
@@ -21,9 +22,17 @@ const Quotes = () => {
                 calc = weight;
             }
         }
+        setPlace({
+            destiny: destiny,
+            origin: origin
+        })
         setWeight(calc);
         setDisplayQuote(true);
     })
+
+    useEffect( () => {
+        setDisplayQuote(false)
+    }, [packageRadio])
 
     return (
         <section className='container'>
@@ -189,7 +198,7 @@ const Quotes = () => {
             </form>
             <div className="table_box">
                 {
-                    displayQuote && <Table weight={weight}/>
+                    displayQuote && <Table weight={weight} type={packageRadio} places={place}/>
                 }
             </div>
         </section>

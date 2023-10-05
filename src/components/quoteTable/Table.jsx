@@ -1,14 +1,19 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import './table.css';
 
-const Table = ({ weight }) => {
+const Table = ({ weight, type, places }) => {
     const [landGuide, setLandGuide] = useState(0);
     const [airGuide, setAirGuide] = useState(0);
     const [landExtra, setLandExtra] = useState(0);
     const peso = parseInt(weight)
 
     const getLandGuide = () => {
-        if(peso > 0 && peso == 1 ){
+        if(!type){
+            setLandGuide(525);
+            setAirGuide(525);
+            setLandExtra(0);
+        } else if(peso > 0 && peso == 1 ){
             setLandExtra(0)
             setLandGuide(525);
         } else if(peso >= 2 && peso <= 5){
@@ -77,6 +82,32 @@ const Table = ({ weight }) => {
 
     return (
         <div className="container">
+            <div className="head_table">
+                <div>
+                    <p>Tipo de envió: </p>
+                    <span>{type ? "Paquete" : "Sobre"}</span>
+                </div>
+                <div>
+                    <p>Origen:</p>
+                    <span>{places.origin}</span>
+                </div>
+                <div>
+                    <p>Destino:</p>
+                    <span>{places.destiny}</span>
+                </div>
+            </div>
+            <div className='delivery'>
+                <h4>Dias de entrega:</h4>
+                <div className="days">
+                    <span>Lunes</span>
+                    <span>Martes</span>
+                    <span>Miércoles</span>
+                    <span>Jueves</span>
+                    <span>Viernes</span>
+                    <span>Sabado</span>
+                    <span>Domingo</span>
+                </div>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -111,11 +142,12 @@ const Table = ({ weight }) => {
                     </tr>
                 </tbody>
             </table>
-            <ul>
-                <li>Costos de embalaje ya incluidos</li>
-                <li>IVA incluido</li>
-                <li></li>
-                <li></li>
+            <ul className='notes'>
+                <li>*Costos de embalaje y tramites ya incluidos</li>
+                <li>*IVA incluido</li>
+                <li>*Se aplica peso volumétrico cuando este es superior al peso físico</li>
+                <li>*En caso de que sea zona extendida puede aplicar cargo extra en sucursal</li>
+                <li>*Los sobres no de deben sobre pasar la cantidad de 30 hojas</li>
             </ul>
         </div>
     );
