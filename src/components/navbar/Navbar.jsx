@@ -19,6 +19,7 @@ const Navbar = () => {
                 </Link>
                 <ul className="menu">
                     <li><Link to="/">Inicio</Link></li>
+                    <li><Link to="/about">Servicios</Link></li>
                     <li><Link to="/about">Sobre Nosotros</Link></li>
                     <li><Link to="/contact">Contactanos</Link></li>
                 </ul>
