@@ -8,10 +8,10 @@ const Footer = () => {
             <div className="container_enterprise">
                 <ul className="enterprise">
                     <li>
-                        <a href="#">Aviso de Privacidad</a>
+                        {/* <a href="#">Aviso de Privacidad</a> */}
                     </li>
                     <li>
-                        <a href="#">Unirse a Paqueteria 5 Estrellas</a>
+                        {/* <a href="#">Unirse a Paqueteria 5 Estrellas</a> */}
                     </li>
                 </ul>
             </div>
