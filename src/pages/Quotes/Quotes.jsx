@@ -55,7 +55,7 @@ const Quotes = () => {
                             {...register("origin", {
                                 required: {
                                     value: true,
-                                    message: "Ingrese un codigo postal primero"
+                                    message: "Ingrese un codigo postal de origen"
                                 },
                                 pattern: {
                                     value: /^[0-9]{5}$/,
@@ -74,7 +74,7 @@ const Quotes = () => {
                         <input type="text" id='destiny' {...register("destiny", {
                             required: {
                                 value: true,
-                                message: "Ingrese un codigo destino primero",
+                                message: "Ingrese un codigo postal de destino",
                             },
                             pattern: {
                                 value: /^[0-9]{5}$/,
@@ -99,7 +99,15 @@ const Quotes = () => {
                     packageRadio && (
                         <div className='package_details'>
                             <div className="form_group-head">
-                                <h4>Proporcione los datos del paquete.</h4>
+                                <div className="send_detail">
+                                    <h4>Proporcione los datos del paquete.</h4>
+                                    <p>Para sus envíos es necesario tomar en cuenta las siguientes indicaciones</p>
+                                    <ul>
+                                        <li>En cargas terrestres de mas de 50 kgs se generan cargos extra por sobre peso</li>
+                                        <li>El peso máximo en envíos aero es de 40kgs</li>
+                                        <li>En el caso de envíos terrestres el peso máximo es de 60 kgs</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div className="form_group-package">
                                 <div className="form_group-package-item">
