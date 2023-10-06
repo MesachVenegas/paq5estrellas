@@ -59,6 +59,18 @@ th{
     width: 50%;
 }
 
+.send_air {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.air{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 td {
     height: 30px;
     text-align: right;
