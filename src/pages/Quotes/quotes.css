@@ -47,6 +47,22 @@
     color: var(--text);
 }
 
+.send_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    align-items: flex-start;
+
+    > ul {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        font-size: .9em;
+        list-style: none;
+    }
+}
+
 .form_group-package {
     display: flex;
     flex-wrap: wrap;
