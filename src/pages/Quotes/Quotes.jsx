@@ -104,8 +104,8 @@ const Quotes = () => {
                                     <p>Para sus envíos es necesario tomar en cuenta las siguientes indicaciones</p>
                                     <ul>
                                         <li>En cargas terrestres de mas de 50 kgs se generan cargos extra por sobre peso</li>
-                                        <li>El peso máximo en envíos aero es de 40kgs</li>
-                                        <li>En el caso de envíos terrestres el peso máximo es de 60 kgs</li>
+                                        <li>El peso máximo en envíos aéreo es de 40kgs</li>
+                                        <li>En el caso de envíos terrestres el peso máximo es de 65 kgs</li>
                                     </ul>
                                 </div>
                             </div>
