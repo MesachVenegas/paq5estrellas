@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { SocialBar, Navbar, Footer } from './components/Index';
 import Zips from './pages/Zips/Zips';
 import Home from './pages/Home/Home';
@@ -11,7 +11,7 @@ import Work from './pages/Working/Work';
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <SocialBar />
       <Navbar />
       <main>
@@ -25,7 +25,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
