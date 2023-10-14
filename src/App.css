@@ -63,3 +63,7 @@
         }
     }
 }
+
+.frame_tracking{
+    min-height: 50vh ;
+}

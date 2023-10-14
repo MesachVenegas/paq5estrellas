@@ -20,19 +20,22 @@ const Track = () => {
                         </span>
                     </div>
                 </div>
-                {
-                    tracking && (
-                    <iframe
-                        src="https://rastreositecorecms.azurewebsites.net/"
-                        width="100%"
-                        style={{
-                            border: "0",
-                            minHeight: "600px"
-                        }}
-                    >
-                    </iframe>
-                    )
-                }
+                <div className="frame_tracking">
+                    {
+                        tracking && (
+                        <iframe
+                            className='frame_tracking'
+                            src="https://rastreositecorecms.azurewebsites.net/"
+                            width="100%"
+                            style={{
+                                border: "0",
+                                minHeight: "600px"
+                            }}
+                        >
+                        </iframe>
+                        )
+                    }
+                </div>
             </div>
         </section>
     );
