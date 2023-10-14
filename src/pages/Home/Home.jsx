@@ -25,7 +25,7 @@ const Home = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="track" className='action_link'>
+                        <Link to="tracking" className='action_link'>
                             <i className="fa-solid fa-location-dot"></i>
                             Rastrear mi envió
                         </Link>

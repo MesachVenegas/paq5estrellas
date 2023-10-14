@@ -1,7 +1,18 @@
 import laptop from '../../assets/email_laptop.svg';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './style.css';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm("servide_id", "template_id", form.current, "VVPqZdnXne9fptChI")
+            .then( res => console.log(res.text))
+            .catch( error => console.log(error));
+        }
 
     return (
         <section className="contact_container">
@@ -19,7 +30,7 @@ const Contact = () => {
                     </figure>
                 </div>
                 <div className="form_container">
-                    <form className='box'>
+                    <form className='box' ref={form} onSubmit={sendEmail}>
                         <div className="input_wrapper">
                             <input
                                 id='email'
