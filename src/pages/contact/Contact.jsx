@@ -1,17 +1,29 @@
 import laptop from '../../assets/email_laptop.svg';
-import { useRef } from 'react';
+import { lazy, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './style.css';
 
+const Toast = lazy( () => import('../../components/toast/Toast'));
+
 const Contact = () => {
     const form = useRef();
+    const [sended, setSended] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm("servide_id", "template_id", form.current, "VVPqZdnXne9fptChI")
-            .then( res => console.log(res.text))
-            .catch( error => console.log(error));
+        emailjs.sendForm("service_5b6t7as", "template_lgq69cv", form.current, "VVPqZdnXne9fptChI")
+            .then( res =>  {
+                console.info(res.text);
+                setSended(true);
+                setTimeout( () => {
+                    setSended(false);
+                    location.reload();
+                }, 4000)
+            })
+            .catch( error => {
+                console.error(error);
+            });
         }
 
     return (
@@ -30,18 +42,23 @@ const Contact = () => {
                     </figure>
                 </div>
                 <div className="form_container">
-                    <form className='box' ref={form} onSubmit={sendEmail}>
+                    <form
+                        id='email_form'
+                        className='box'
+                        ref={form}
+                        onSubmit={sendEmail}
+                    >
                         <div className="input_wrapper">
                             <input
-                                id='email'
+                                id='name'
                                 type="text"
-                                name='email'
+                                name='name'
                                 className='input_field'
                                 placeholder='john Doe'
                                 required
                             />
                             <label
-                                htmlFor="email"
+                                htmlFor="name"
                                 className='input_label'
                             >
                                 Nombre
@@ -50,14 +67,14 @@ const Contact = () => {
                         </div>
                         <div className="input_wrapper">
                             <input
-                                id='email'
+                                id='subject'
                                 type="text"
-                                name='email'
+                                name='subject'
                                 className='input_field'
                                 placeholder='consult'
                             />
                             <label
-                                htmlFor="email"
+                                htmlFor="subject"
                                 className='input_label'
                             >
                                 Asunto
@@ -103,6 +120,9 @@ const Contact = () => {
                         </button>
                     </form>
                 </div>
+                {
+                    sended && <Toast />
+                }
             </div>
         </section>
     );
