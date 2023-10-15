@@ -37,7 +37,7 @@ const Footer = () => {
                     Made with
                     <span>❤️</span>
                     by
-                    <a href="https://meshdev.vercel.app/" target='_blank' rel='noreferrer'>
+                    <a href="https://meshdev.tech/" target='_blank' rel='noreferrer'>
                         MeshDev
                     </a>
                 </small>
