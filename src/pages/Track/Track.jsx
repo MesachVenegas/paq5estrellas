@@ -10,7 +10,7 @@ const Track = () => {
             <div>
                 <div className="section_head">
                     <h2>Rastreo de Envíos</h2>
-                    <p>Elige una de las opciones de rastro disponibles a continuacion para realizar el seguimiento de tu envió</p>
+                    <p>Elige una de las opciones de rastreo disponibles a continuacion para realizar el seguimiento de tu envió</p>
                     <div className="shipping">
                         <a href="https://www.paquetexpress.com.mx/">
                             <img src={paquetexpress} alt="paquetexpress_logo" />
