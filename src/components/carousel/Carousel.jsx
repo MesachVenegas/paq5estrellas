@@ -25,6 +25,7 @@ const Carousel = ({ images }) => {
                         key={index}
                         src={image}
                         className={currentIndex === index ? "active" : "inactive"}
+                        alt='carrusel_aviso'
                     />
                 ))
                 }
