@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1366px;
     margin: auto;
     overflow: hidden;
 }
@@ -12,89 +11,21 @@
 
 .carousel-images {
     width: 100%;
-    height: 250px;
-
-    > img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: opacity 0.2s ease;
-        z-index: 1;
-    }
 }
 
-.carousel-images img.active {
-    animation: fade 1.5s;
+.img_item {
+    width: 100%;
+    min-height: 250px;
+    object-fit: fill;
 }
-
-.carousel-images img.inactive {
-    display: none;
-}
-
-.carousel-controls button {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    transform: translateY(-80%);
-    font-size: 22px;
-    border: 0;
-    background-color: rgba(0, 0, 0, .2);
-    color: var(--white);
-    padding: 16px 10px;
-    cursor: pointer;
-}
-
-.carousel-controls button:hover{
-    background-color: rgba(0, 0, 0, .5);
-}
-
-.left-btn {
-    left: 0;
-}
-
-.right-btn {
-    right: 0;
-}
-
-.carousel-dots {
-    display: flex;
-    align-self: center;
-    gap: 10px;
-    margin: 16px 0;
-}
-
-.dot {
-    position: relative;
-    width: 15px;
-    height: 15px;
-    background-color: var(--yellow);
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.dot.active {
-    background-color: var(--blue);
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.1;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @media screen and (min-width: 489px) {
-    .carousel-images{
+    .img_item {
         height: 300px;
     }
 }
 
 @media screen and (min-width: 589px){
-    .carousel-images{
+    .img_item {
         height: 400px;
 
         > img {
@@ -104,8 +35,8 @@
 }
 
 @media screen and (min-width: 992px){
-    .carousel-images{
-        height: 500px;
+    .img_item{
+        height: 550px;
 
         > img {
             object-fit: fill;
