@@ -1,0 +1,18 @@
+.loading_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    background: white;
+    border: 1px solid;
+
+    > figure {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50);
+    }
+}
+

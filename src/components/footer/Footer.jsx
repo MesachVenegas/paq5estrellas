@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="container">
                 <div className="body_foot">
                     <div className='foot_brand'>
-                        <img src={logo__foot} alt="Paqueteria_5_estrellas_logo" />
+                        <img src={logo__foot} alt="Paqueteria_5_estrellas_logo"  width="100%" height="auto"/>
                     </div>
                     <ul className='foot_links'>
                         <li>
