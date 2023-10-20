@@ -46,6 +46,18 @@ const Home = () => {
                             Códigos Postales
                         </Link>
                     </li>
+                    <li>
+                        <a href='https://www.estafeta.com/Herramientas/Buscar-una-sucursal' className='action_link'>
+                            <i className="fa-solid fa-map-location-dot"></i>
+                            Localizar Sucursales
+                        </a>
+                    </li>
+                    <li>
+                        <a href='https://www.estafeta.com/Herramientas/Frecuencias-de-entrega' className='action_link'>
+                            <i className="fa-regular fa-calendar-days"></i>
+                            Frecuencia de Entrega
+                        </a>
+                    </li>
                 </ul>
             </section>
 
