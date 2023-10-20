@@ -4,13 +4,20 @@ import slider1 from '../../assets/paqueteria_layer.webp';
 import slider3  from '../../assets/slider3.webp';
 import slider4  from '../../assets/slider4.webp';
 import slider5  from '../../assets/slider5.webp';
-import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import './home.css'
 
 const Carousel = lazy( () => import('../../components/carousel/Carousel'));
 
 const Home = () => {
     const imgs = [slider1, slider3, slider4, slider5];
+
+    useEffect(() => {
+        const title = document.title;
+        if (title !== "Paqueteria 5 Estrellas | Home") {
+            document.title = 'Paqueteria 5 Estrellas | Home'
+        }
+    }, [])
 
     return (
         <div className='container'>
