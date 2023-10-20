@@ -67,14 +67,14 @@ const About = () => {
                     </div>
                     <div className="card_item-services">
                         <h4>Guías Pre-pagadas</h4>
-                        <p>Contamos con recolecciones a domicilio para mayor comodidad y ahorro de tiempo.</p>
+                        <p>Contamos con el servicio de guías pre-pagadas para su mayor comodidad. </p>
                         <figure className='card_figure'>
                             <img className='card_img' src={guide} alt="planeta" width="100%" height="100%" />
                         </figure>
                     </div>
                     <div className="card_item-services">
                         <h4>Envíos Terrestres - Aéreos</h4>
-                        <p>Contamos con recolecciones a domicilio para mayor comodidad y ahorro de tiempo.</p>
+                        <p>Contamos con cobertura terrestre y area para cubrir las necesidades de tu envió.</p>
                         <figure className='card_figure'>
                             <img className='card_img' src={envios} alt="planeta" width="100%" height="100%" />
                         </figure>
