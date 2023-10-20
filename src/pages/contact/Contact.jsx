@@ -1,5 +1,5 @@
 import laptop from '../../assets/email_laptop.svg';
-import { lazy, useRef, useState } from 'react';
+import { lazy, useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './style.css';
 
@@ -25,6 +25,13 @@ const Contact = () => {
                 console.error(error);
             });
         }
+
+    useEffect(() => {
+        const title = document.title;
+        if (title !== "Paqueteria 5 Estrellas | Contacto") {
+            document.title = 'Paqueteria 5 Estrellas | Contacto'
+        }
+    }, [])
 
     return (
         <section className="contact_container">
