@@ -26,7 +26,6 @@ const Navbar = () => {
                 </Link>
                 <ul className="menu">
                     <li onClick={closeMenu}><Link to="/">Inicio</Link></li>
-                    <li onClick={closeMenu}><Link to="/about">Servicios</Link></li>
                     <li onClick={closeMenu}><Link to="/about">Sobre Nosotros</Link></li>
                     <li onClick={closeMenu}><Link to="/contact">Contactanos</Link></li>
                 </ul>
