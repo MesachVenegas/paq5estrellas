@@ -28,6 +28,9 @@ const Footer = () => {
                             <a href="tel:664 130 3694">664 130 3694</a>
                         </li>
                         <li>
+                            <a href="mailto: contacto@paqueteria5estrellas.com"><i className="fa-solid fa-envelope"></i>contacto@paqueteria5estrellas.com</a>
+                        </li>
+                        <li>
                             <a href={social.whatsapp}><i className="fa-brands fa-whatsapp"></i>Envíanos un mensaje</a>
                         </li>
                     </ul>
