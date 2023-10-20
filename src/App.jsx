@@ -7,8 +7,8 @@ import './App.css'
 const Home = lazy(() => import('./pages/Home/Home'));
 const Track = lazy(() => import('./pages/Track/Track'));
 const Quotes = lazy(() => import('./pages/Quotes/Quotes'));
+const About = lazy(() => import('./pages/about/About'));
 const Contact = lazy(() => import('./pages/contact/Contact'));
-const Work = lazy(() => import('./pages/Working/Work'));
 const Zips = lazy(() => import('./pages/Zips/Zips'));
 
 
@@ -25,7 +25,7 @@ function App() {
 							<Route path='/zips' element={<Zips />} />
 							<Route path='/tracking' element={<Track />} />
 							<Route path='/quote' element={<Quotes />} />
-							<Route path='/about' element={<Work />} />
+							<Route path='/about' element={<About />} />
 							<Route path='/contact' element={<Contact />} />
 						</Routes>
 					</main>
